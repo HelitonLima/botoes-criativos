@@ -1,0 +1,151 @@
+* {
+    font-family: 'Calibri';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #f3f3f3;
+    padding: 20px;
+    margin-top: 30px;
+    border: 1px solid #ebebeb;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    color: #323232
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-button {
+    margin: 10px 0;
+    width: 189px;
+    height: 42px;
+}
+
+button {
+    border: none;
+    transition: all .5s;
+    width: 180px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button span {
+    display: inline-block;
+    position: relative;
+    transition: all .5s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.bounce-effect:hover {
+    width: 189px;
+    height: 42px;
+}
+
+.bounce-effect:active {
+    width: 171px;
+    height: 38px;
+}
+
+/* FIRST BUTTON */
+
+.first-button {
+    background-color: #3389ca;
+    color: #FFF;
+}
+
+.first-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.first-button:hover span {
+    padding-right: 20px;
+}
+
+.first-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* SECOND BUTTON */
+
+.second-button {
+    background-color: transparent;
+    color: #7a2eb1;
+    border: 1px solid #7a2eb1;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.second-button::before {
+    content: "";
+    width: 100%;
+    height: 0%;
+    background-color: #7a2eb1;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: 1;
+    transition: all .8s;
+    border-radius: 50% 50% 0 0;
+}
+
+.second-button span {
+    z-index: 2;
+}
+
+.second-button:hover {
+    color: #FFF;
+}
+
+.second-button:hover::before {
+    height: 180%;
+}
+
+/* THIRD BUTTON */
+
+.third-button {
+    background: #b13636;
+    border-radius: 12px;
+    color: #FFF;
+    padding: 0;
+    outline-offset: 4px;
+}
+
+.third-button span {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    background: #f04949;
+    transform: translateY(-7px);
+}
+
+.third-button:hover span {
+    transform: translateY(-6px);
+}
+
+.third-button:active span {
+    transform: translateY(-1px);
+}
